@@ -1,0 +1,1 @@
+ /Users/uis/Desktop/Dating/.dart_tool/flutter_build/15893a27133013d1e282a5190a3009fc/native_assets.yaml: 

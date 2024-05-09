@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:8:5-57:19
+INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:8:5-64:19
 MERGED from [:firebase_analytics] /Users/uis/Desktop/Dating/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-19:19
 MERGED from [:firebase_analytics] /Users/uis/Desktop/Dating/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-19:19
 MERGED from [:firebase_messaging] /Users/uis/Desktop/Dating/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-48:19
@@ -92,11 +92,11 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] /Users/uis/.gradle
 	android:name
 		INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
-INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
-INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
-INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
-MERGED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
+ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
+INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
+INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
+INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
+MERGED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
 MERGED from [:sign_in_with_apple] /Users/uis/Desktop/Dating/build/sign_in_with_apple/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_analytics] /Users/uis/Desktop/Dating/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:firebase_messaging] /Users/uis/Desktop/Dating/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-50:12
@@ -202,15 +202,15 @@ INJECTED from /Users/uis/Desktop/Dating/android/app/src/debug/AndroidManifest.xm
 INJECTED from /Users/uis/Desktop/Dating/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 	package
 		INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
+		ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
 		INJECTED from /Users/uis/Desktop/Dating/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
+		ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
 		INJECTED from /Users/uis/Desktop/Dating/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-58:12
+		ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:1-65:12
 		INJECTED from /Users/uis/Desktop/Dating/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/uis/Desktop/Dating/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -781,13 +781,10 @@ ADDED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/cach
 	android:name
 		ADDED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:18:18-52
 activity#com.facebook.FacebookActivity
-ADDED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:22:9-25:66
-	android:configChanges
-		ADDED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:24:13-96
+MERGED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:22:9-25:66
+MERGED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:22:9-25:66
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:25:13-63
-	android:name
-		ADDED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:23:13-57
 activity#com.facebook.CustomTabMainActivity
 ADDED from [com.facebook.android:facebook-common:17.0.0] /Users/uis/.gradle/caches/transforms-3/b7d9ef1e6052a3dc214215785efbacd9/transformed/jetified-facebook-common-17.0.0/AndroidManifest.xml:26:9-71
 	android:name

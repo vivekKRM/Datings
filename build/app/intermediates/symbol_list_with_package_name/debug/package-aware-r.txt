@@ -1225,6 +1225,7 @@ string confirm_device_credential_password
 string copy_toast_msg
 string default_error_msg
 string facebook_app_id
+string facebook_client_token
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
