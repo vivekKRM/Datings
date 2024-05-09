@@ -1,0 +1,368 @@
+import 'package:Dating/constants/styles.dart';
+import 'package:Dating/json/getSeaExperience.dart';
+import 'package:Dating/utils/appManager.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
+
+class EditSeaExperienceDetails extends StatefulWidget {
+  EditSeaExperienceDetails(
+      {Key? key,
+      required this.title,
+      required this.appManager,
+      required this.updateBtn})
+      : super(key: key);
+
+  final String title;
+  final AppManager appManager;
+  final bool updateBtn;
+
+  @override
+  _EditSeaExperienceDetailsState createState() =>
+      _EditSeaExperienceDetailsState();
+}
+
+class _EditSeaExperienceDetailsState extends State<EditSeaExperienceDetails> {
+  String user_id = '';
+  late FToast fToast;
+  late SharedPreferences prefs;
+  DateTime _selectedDate = DateTime.now();
+  List<Result?> seaExperience = [];
+
+  Future<void> getExperienceDetails(String user_id) async {
+    if (user_id != "") {
+      final requestBody = {"user_id": user_id};
+      widget.appManager.apis
+          .getSeaExperienceDetails(
+              requestBody, (prefs.getString('authToken') ?? ''))
+          .then((response) async {
+        // Handle successful response
+        if (response?.status == 200) {
+          //Success
+          // showToast(response?.message ?? '', 2, kPositiveToastColor, context);
+          setState(() {
+            seaExperience = [];
+            seaExperience = response?.user ?? [];
+          });
+        } else if (response?.status == 201) {
+          showToast(response?.message ?? '', 2, kToastColor, context);
+        } else if (response?.status == 502) {
+          await widget.appManager.clearLoggedIn();
+          if (widget.appManager.islogout == true) {
+            widget.appManager.utils.isPatientExitDialogShown = false;
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/obs', (route) => false);
+          }
+        } else {
+          print("Failed to get certificate data");
+        }
+      }).catchError((error) {
+        // Handle error
+        print("Failed to get certificate data: $error");
+      });
+    } else {
+      showToast('Please get user_id', 2, kToastColor, context);
+    }
+  }
+
+  Future<void> deleteExperienceDetails(String id) async {
+    if (id != "") {
+      final requestBody = {"seajob_id": id};
+      widget.appManager.apis
+          .deleteSeaExperience(
+              requestBody, (prefs.getString('authToken') ?? ''))
+          .then((response) async {
+        // Handle successful response
+        if (response?.status == 200) {
+          //Success
+          showToast(response?.message ?? '', 2, kPositiveToastColor, context);
+          getExperienceDetails(user_id);
+        } else if (response?.status == 201) {
+          showToast(response?.message ?? '', 2, kToastColor, context);
+        } else if (response?.status == 502) {
+          await widget.appManager.clearLoggedIn();
+          if (widget.appManager.islogout == true) {
+            widget.appManager.utils.isPatientExitDialogShown = false;
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/obs', (route) => false);
+          }
+        } else {
+          print("Failed to delete certificate data");
+        }
+      }).catchError((error) {
+        // Handle error
+        print("Failed to delete certificate data: $error");
+      });
+    } else {
+      showToast('Please get seajob_id', 2, kToastColor, context);
+    }
+  }
+
+  void showCustomAlertDialog(String title, String subtitle, String id) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            title,
+            style: kNamePainStyle,
+          ),
+          content: Text(
+            subtitle,
+            style: kTableHeaderTextStyle,
+          ),
+          actions: <Widget>[
+            // OK Button
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                deleteExperienceDetails(id);
+              },
+              child: Text(
+                'OK',
+                style: kCardValueTextStyle,
+              ),
+            ),
+            // Cancel Button
+            TextButton(
+              onPressed: () {
+                // Close the dialog
+                Navigator.of(context).pop();
+                // Add your Cancel button action here
+              },
+              child: Text(
+                'Cancel',
+                style: kCardValueTextStyle,
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void showToast(
+      String msg, int duration, Color bgColor, BuildContext context) {
+    Fluttertoast.showToast(
+      msg: msg,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: duration,
+      backgroundColor: bgColor,
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    fToast = FToast();
+    getPrefs();
+    fToast.init(context);
+    print(widget.updateBtn);
+  }
+
+  getPrefs() async {
+    prefs = await SharedPreferences.getInstance();
+    user_id = prefs.getString('sId') ?? '';
+    getExperienceDetails(user_id);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return WillPopScope(
+        onWillPop: () async {
+          // Disable back button
+          return false;
+        },
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: kAppBarColor,
+            surfaceTintColor: kAppBarColor,
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back_ios),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            title: Text(
+              'Experience Details',
+              style: kHeaderTextStyle,
+            ),
+          ),
+          body: GestureDetector(
+            onTap: () {
+              FocusScope.of(context).unfocus();
+            },
+            child: SingleChildScrollView(
+              child: Container(
+                color: backgroundColor,
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        child: ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: seaExperience.length,
+                          itemBuilder: (context, index) {
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 10,
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color(0xFFECEDF5),
+                                    ),
+                                    padding: EdgeInsets.only(
+                                        top: 20,
+                                        bottom: 20,
+                                        left: 15,
+                                        right: 10),
+                                    child: Row(
+                                      // mainAxisAlignment:
+                                      //     MainAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Experience ${index + 1}',
+                                          style: kvaccineTextStyle,
+                                        ),
+                                        SizedBox(
+                                          width: size.width * 0.38,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Map<String, dynamic> arguments = {
+                                              'update': true,
+                                              'index': seaExperience[index]
+                                                      ?.Datingid ??
+                                                  '',
+                                              'add': false
+                                            };
+                                            Navigator.pushNamed(
+                                                    context, "/seaexperience",
+                                                    arguments: arguments)
+                                                .then((_) {
+                                              Navigator.pop(context);
+                                            });
+                                            // Add your navigation logic here
+                                          },
+                                          child: Container(
+                                            child: Icon(
+                                              Icons.edit, // Use the edit icon
+                                              size:
+                                                  24, // Adjust the size as needed
+                                              color:
+                                                  kButtonColor, // Change color according to your design
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            print('Delete API');
+                                            showCustomAlertDialog(
+                                                'Delete',
+                                                'Do you want to delete the selected sea experience detail?',
+                                                seaExperience[index]
+                                                        ?.Datingid ??
+                                                    '');
+                                          },
+                                          child: Container(
+                                            child: Icon(
+                                              Icons.delete, // Use the edit icon
+                                              size:
+                                                  24, // Adjust the size as needed
+                                              color:
+                                                  kRejectButtonColor, // Change color according to your design
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                        height: seaExperience.length * 100,
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          // color:
+                          //     Colors.grey[200], // Set your desired background color
+                        ),
+                        child: InkWell(
+                          onTap: () {
+                            // setState(() {
+                            //   seaman
+                            //       .add(null); // Add a new entry to the seaman list
+                            // });
+                            Map<String, dynamic> arguments = {
+                              'update': false,
+                              'index': (seaExperience.length + 1).toString(),
+                              'add': true
+                            };
+                            Navigator.pushNamed(context, "/seaexperience",
+                                    arguments: arguments)
+                                .then((_) {
+                              getExperienceDetails(user_id);
+                            });
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color:
+                                      kButtonColor, // Set your desired circle color
+                                ),
+                                padding: EdgeInsets.all(8),
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors
+                                      .white, // Set your desired icon color
+                                ),
+                              ),
+                              SizedBox(
+                                  width:
+                                      10), // Adjust spacing between icon and text
+                              Text(
+                                'Add More',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ));
+  }
+}

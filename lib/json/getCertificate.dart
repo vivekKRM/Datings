@@ -1,0 +1,63 @@
+class GetCertificate {
+  late int status;
+  late String message;
+  late List<Certificates> certificates;
+
+  GetCertificate({
+    required this.status,
+    required this.message,
+    required this.certificates
+  });
+
+   GetCertificate.fromJson(Map<String, dynamic> json) {
+      status = json['status'];
+      message = json['message'];
+      if (json['certificates'] != null) {
+      certificates = <Certificates>[];
+      json['certificates'].forEach((v) {
+        certificates.add(Certificates.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['status'] = status;
+    data['message'] = message;
+    if (this.certificates != null) {
+      data['certificates'] = certificates.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class Certificates {
+  late String seajob_id;
+  late String seajob_status;
+  late String certificate_name;
+  late String sort;
+
+  Certificates({
+    required this.seajob_status,
+    required this.certificate_name,
+    required this.seajob_id,
+    required this.sort,
+  });
+
+  Certificates.fromJson(Map<String, dynamic> json) {
+    seajob_id = json['seajob_id'];
+    seajob_status = json['seajob_status'];
+    certificate_name = json['certificate_name'];
+    sort = json['sort'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['seajob_id'] = this.seajob_id;
+    data['seajob_status'] = this.seajob_status;
+     data['certificate_name'] = this.certificate_name;
+    data['sort'] = this.sort;
+
+    return data;
+  }
+}
