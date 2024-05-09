@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.dating.app-mergeReleaseResources-34:/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/Users/uis/.gradle/caches/transforms-3/776c5f7a0f22cfbc3d28a06d4f0c49c3/transformed/appcompat-1.2.0/res/values-v22/values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,487",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,482,764"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+io.flutter.plugins.firebase.core.firebase_core-jetified-firebase-common-20.4.2-0 /Users/uis/.gradle/caches/transforms-3/724d64ad8e23f6922050a9b850a8e549/transformed/jetified-firebase-common-20.4.2/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-play-services-basement-18.1.0-1 /Users/uis/.gradle/caches/transforms-3/85536bb32af2dce2f666797248afa102/transformed/jetified-play-services-basement-18.1.0/res
+io.flutter.plugins.firebase.core.firebase_core-core-1.6.0-2 /Users/uis/.gradle/caches/transforms-3/8e1a0d7de946b71857cd10e7654a3cc8/transformed/core-1.6.0/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-annotation-experimental-1.1.0-3 /Users/uis/.gradle/caches/transforms-3/c1413100091968fbb2a62dcd66468b3a/transformed/jetified-annotation-experimental-1.1.0/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-window-java-1.0.0-beta04-4 /Users/uis/.gradle/caches/transforms-3/efec6f1eb0ed9ba6d2bb01421abdfbb1/transformed/jetified-window-java-1.0.0-beta04/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-window-1.0.0-beta04-5 /Users/uis/.gradle/caches/transforms-3/fce3d24a9581b2a9171219f705aeb876/transformed/jetified-window-1.0.0-beta04/res
+io.flutter.plugins.firebase.core.firebase_core-main-6 /Users/uis/.pub-cache/hosted/pub.dev/firebase_core-2.25.5/android/src/main/res
+io.flutter.plugins.firebase.core.firebase_core-release-7 /Users/uis/.pub-cache/hosted/pub.dev/firebase_core-2.25.5/android/src/release/res
+io.flutter.plugins.firebase.core.firebase_core-pngs-8 /Users/uis/Desktop/Dating/build/firebase_core/generated/res/pngs/release
+io.flutter.plugins.firebase.core.firebase_core-resValues-9 /Users/uis/Desktop/Dating/build/firebase_core/generated/res/resValues/release
+io.flutter.plugins.firebase.core.firebase_core-rs-10 /Users/uis/Desktop/Dating/build/firebase_core/generated/res/rs/release
+io.flutter.plugins.firebase.core.firebase_core-mergeReleaseResources-11 /Users/uis/Desktop/Dating/build/firebase_core/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.firebase.core.firebase_core-mergeReleaseResources-12 /Users/uis/Desktop/Dating/build/firebase_core/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.firebase.core.firebase_core-merged_res-13 /Users/uis/Desktop/Dating/build/firebase_core/intermediates/merged_res/release

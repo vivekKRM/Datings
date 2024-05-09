@@ -1,0 +1,12 @@
+com.spencerccf.app_settings-core-1.6.0-0 /Users/uis/.gradle/caches/transforms-3/8e1a0d7de946b71857cd10e7654a3cc8/transformed/core-1.6.0/res
+com.spencerccf.app_settings-jetified-annotation-experimental-1.1.0-1 /Users/uis/.gradle/caches/transforms-3/c1413100091968fbb2a62dcd66468b3a/transformed/jetified-annotation-experimental-1.1.0/res
+com.spencerccf.app_settings-jetified-window-java-1.0.0-beta04-2 /Users/uis/.gradle/caches/transforms-3/efec6f1eb0ed9ba6d2bb01421abdfbb1/transformed/jetified-window-java-1.0.0-beta04/res
+com.spencerccf.app_settings-jetified-window-1.0.0-beta04-3 /Users/uis/.gradle/caches/transforms-3/fce3d24a9581b2a9171219f705aeb876/transformed/jetified-window-1.0.0-beta04/res
+com.spencerccf.app_settings-main-4 /Users/uis/.pub-cache/hosted/pub.dev/app_settings-5.1.1/android/src/main/res
+com.spencerccf.app_settings-release-5 /Users/uis/.pub-cache/hosted/pub.dev/app_settings-5.1.1/android/src/release/res
+com.spencerccf.app_settings-pngs-6 /Users/uis/Desktop/Dating/build/app_settings/generated/res/pngs/release
+com.spencerccf.app_settings-resValues-7 /Users/uis/Desktop/Dating/build/app_settings/generated/res/resValues/release
+com.spencerccf.app_settings-rs-8 /Users/uis/Desktop/Dating/build/app_settings/generated/res/rs/release
+com.spencerccf.app_settings-mergeReleaseResources-9 /Users/uis/Desktop/Dating/build/app_settings/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.spencerccf.app_settings-mergeReleaseResources-10 /Users/uis/Desktop/Dating/build/app_settings/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.spencerccf.app_settings-merged_res-11 /Users/uis/Desktop/Dating/build/app_settings/intermediates/merged_res/release

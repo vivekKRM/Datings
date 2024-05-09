@@ -1,0 +1,13 @@
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-core-1.6.0-0 /Users/uis/.gradle/caches/transforms-3/8e1a0d7de946b71857cd10e7654a3cc8/transformed/core-1.6.0/res
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-media-1.1.0-1 /Users/uis/.gradle/caches/transforms-3/aefb1652833afc374da60df7b381dc93/transformed/media-1.1.0/res
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-jetified-annotation-experimental-1.1.0-2 /Users/uis/.gradle/caches/transforms-3/c1413100091968fbb2a62dcd66468b3a/transformed/jetified-annotation-experimental-1.1.0/res
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-jetified-window-java-1.0.0-beta04-3 /Users/uis/.gradle/caches/transforms-3/efec6f1eb0ed9ba6d2bb01421abdfbb1/transformed/jetified-window-java-1.0.0-beta04/res
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-jetified-window-1.0.0-beta04-4 /Users/uis/.gradle/caches/transforms-3/fce3d24a9581b2a9171219f705aeb876/transformed/jetified-window-1.0.0-beta04/res
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-main-5 /Users/uis/.pub-cache/hosted/pub.dev/flutter_local_notifications-16.3.2/android/src/main/res
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-release-6 /Users/uis/.pub-cache/hosted/pub.dev/flutter_local_notifications-16.3.2/android/src/release/res
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-pngs-7 /Users/uis/Desktop/Dating/build/flutter_local_notifications/generated/res/pngs/release
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-resValues-8 /Users/uis/Desktop/Dating/build/flutter_local_notifications/generated/res/resValues/release
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-rs-9 /Users/uis/Desktop/Dating/build/flutter_local_notifications/generated/res/rs/release
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-mergeReleaseResources-10 /Users/uis/Desktop/Dating/build/flutter_local_notifications/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-mergeReleaseResources-11 /Users/uis/Desktop/Dating/build/flutter_local_notifications/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.dexterous.flutterlocalnotifications.flutter_local_notifications-merged_res-12 /Users/uis/Desktop/Dating/build/flutter_local_notifications/intermediates/merged_res/release
